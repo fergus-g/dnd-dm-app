@@ -13,7 +13,7 @@ const Header = (props) => {
         <h1>DM-Helper</h1>
       </header>
       <div className={classes['main-image']}>
-      <img src={props.campaign} alt="campaign header" />
+      <img src={waterdeep} alt="campaign header" />
 
       </div>
     </Fragment>

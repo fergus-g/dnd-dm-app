@@ -6,8 +6,6 @@ import Dropdown from '../UI/Dropdown';
 
 const CampaignSelector = (props) => {
 
-
-    }
     return <Fragment>
     <section className={classes.campaign}>
         <h2>Welcome to the DM Helper!</h2>

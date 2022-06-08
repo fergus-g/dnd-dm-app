@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import classes from './Dropdown.module.css'
 
-const Dropdown = () => {
+const Dropdown = (props) => {
 
     const [campaign, setCampaign] = useState();
 
@@ -11,7 +11,7 @@ const Dropdown = () => {
     }
     return <div className={classes.dropdown}>
       <select onSelect={dropdownHandler} className={classes.dropbtn}>
-        <option value="default"></option>
+        <option value="campaign"></option>
         <option value="icewind">Icewind Dale: Rime of the Frost Maiden</option>
         <option value="strahd">Curse of Strahd</option>
         <option value="waterdeep">Waterdeep: Dragon Heist</option>
