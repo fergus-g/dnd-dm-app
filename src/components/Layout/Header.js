@@ -1,7 +1,9 @@
 import { Fragment } from "react";
 
-
-import icewindHeader from "../../assets/icewind-header.jpg";
+import CampaignSelector from "../Campaign/CampaignSelector";
+import icewind from "../../assets/icewind-header.jpg";
+import strahd from "../../assets/curseofstrahd-header.jpg"
+import waterdeep from "../../assets/waterdeep-header.jpg"
 import classes from './Header.module.css'
 
 const Header = (props) => {
@@ -9,10 +11,9 @@ const Header = (props) => {
     <Fragment>
       <header className={classes.header}>
         <h1>DM-Helper</h1>
-        =
       </header>
       <div className={classes['main-image']}>
-      <img src={icewindHeader} alt="campaign header" />
+      <img src={props.campaign} alt="campaign header" />
 
       </div>
     </Fragment>
