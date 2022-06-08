@@ -6,11 +6,7 @@ import Dropdown from '../UI/Dropdown';
 
 const CampaignSelector = (props) => {
 
-    const [campaign, setCampaign] = useState();
 
-    const dropdownHandler = (e) => {
-        console.log(e);
-        setCampaign(e);
     }
     return <Fragment>
     <section className={classes.campaign}>
