@@ -2,9 +2,9 @@ import { Fragment } from "react";
 
 import CampaignSelector from "../Campaign/CampaignSelector";
 import icewind from "../../assets/icewind-header.jpg";
-import strahd from "../../assets/curseofstrahd-header.jpg"
-import waterdeep from "../../assets/waterdeep-header.jpg"
-import classes from './Header.module.css'
+import strahd from "../../assets/curseofstrahd-header.jpg";
+import waterdeep from "../../assets/waterdeep-header.jpg";
+import classes from "./Header.module.css";
 
 const Header = (props) => {
   return (
@@ -12,9 +12,8 @@ const Header = (props) => {
       <header className={classes.header}>
         <h1>DM-Helper</h1>
       </header>
-      <div className={classes['main-image']}>
-      <img src={waterdeep} alt="campaign header" />
-
+      <div className={classes["main-image"]}>
+        <img src={icewind} alt="campaign header" />
       </div>
     </Fragment>
   );
