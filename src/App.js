@@ -58,14 +58,20 @@ function App() {
     setChapterModal(false);
   };
 
+  const chapterHandler = () => {
+    setCampaignModal(false);
+    setChapterSelector(true);
+    setCampaignSelector(false);
+  };
+
   return (
     <Fragment>
-      {campaignModal && <CampaignItem onClickModal={hideCampaignModal} />}
+      {campaignModal && <CampaignItem onClickModal={chapterHandler} />}
       <Header />
       <main>
-        {campaignSelector && <CampaignSelector />}
+        {campaignSelector && <CampaignSelector onClick={showCampaignModal} />}
         {chapterSelector && (
-          <ChapterSelector onClickModal={showChapterSelector} />
+          <ChapterSelector onClickHeader={hideChapterSelector} />
         )}
         {questSelector && <AvailableQuests />}
       </main>
