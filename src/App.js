@@ -6,7 +6,7 @@ import AvailableQuests from "./components/Quests/Quests";
 import CampaignItem from "./components/Campaign/CampaignItem";
 
 function App() {
-// MODAL DISPLAY FOR CAMPAIGN CHOICE
+  // MODAL DISPLAY FOR CAMPAIGN CHOICE
   const [campaignModal, setCampaignModal] = useState(false);
 
   const showCampaignModal = () => {
@@ -16,7 +16,7 @@ function App() {
   const hideCampaignModal = () => {
     setCampaignModal(false);
   };
-//CAMPAIGN SELECTOR UI ELEMENT
+  //CAMPAIGN SELECTOR UI ELEMENT
   const [campaignSelector, setCampaignSelector] = useState(true);
 
   const showCampaignSelector = () => {
@@ -26,7 +26,7 @@ function App() {
   const hideCampaignSelector = () => {
     setCampaignSelector(false);
   };
-//CHAPTER SELECTOR UI ELEMENT
+  //CHAPTER SELECTOR UI ELEMENT
   const [chapterSelector, setChapterSelector] = useState(false);
 
   const showChapterSelector = () => {
@@ -36,34 +36,34 @@ function App() {
   const hideChapterSelector = () => {
     setChapterSelector(false);
   };
-//MODAL DISPLAY FOR CHAPTER
-const [chapterModal, setChapterModal] = useState(false);
+  //MODAL DISPLAY FOR CHAPTER
+  const [chapterModal, setChapterModal] = useState(false);
 
-const showChapterModal = () => {
-  setChapterModal(true);
-};
+  const showChapterModal = () => {
+    setChapterModal(true);
+  };
 
-const hideChapterModal = () => {
-  setChapterModal(false);
-};
+  const hideChapterModal = () => {
+    setChapterModal(false);
+  };
 
-//QUEST UI
-const [questSelector, setQuestSelector] = useState(false);
+  //QUEST UI
+  const [questSelector, setQuestSelector] = useState(false);
 
-const showQuestSelector = () => {
-  setChapterModal(true);
-};
+  const showQuestSelector = () => {
+    setChapterModal(true);
+  };
 
-const hideQuestSelector = () => {
-  setChapterModal(false);
-};
+  const hideQuestSelector = () => {
+    setChapterModal(false);
+  };
 
   return (
     <Fragment>
-   {campaignModal && <CampaignItem onClickModal={hideCampaignModal}/>}
+      {campaignModal && <CampaignItem onClickModal={hideCampaignModal} />}
       <Header />
       <main>
-        {campaignSelector && <CampaignSelector onClick={showCampaignModal}/>}
+        {campaignSelector && <CampaignSelector onClick={showCampaignModal} />}
         {chapterSelector && <ChapterSelector />}
         {questSelector && <AvailableQuests />}
       </main>

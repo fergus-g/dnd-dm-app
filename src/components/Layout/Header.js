@@ -5,7 +5,7 @@ import Button from "../UI/Button";
 import icewind from "../../assets/icewind-header.jpg";
 import strahd from "../../assets/curseofstrahd-header.jpg";
 import waterdeep from "../../assets/waterdeep-header.jpg";
-import header from '../../assets/dnd-header.webp';
+import header from "../../assets/dnd-header.webp";
 import HeaderImg from "../UI/HeaderImg";
 import classes from "./Header.module.css";
 
@@ -15,11 +15,11 @@ const Header = (props) => {
       <header className={classes.header}>
         <h1>DM-Helper</h1>
         <div>
-        <Button name="Chapter Selection"/>
-        <Button name="Random Encounter"/>
+          <Button name="Chapter Selection" />
+          <Button name="Random Encounter" />
         </div>
       </header>
-      <HeaderImg image= {header} />       
+      <HeaderImg image={header} />
     </Fragment>
   );
 };
