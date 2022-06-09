@@ -7,20 +7,29 @@ const CampaignItem = (props) => {
     {
      id: 'icewind',
      name: 'Icewind Dale: Rime of the Frostmaiden', 
+     },
+     {
+     id: 'curse',
+     name: 'Curse of Strahd', 
+     },
+     {
+     id: 'waterdeep',
+     name: 'Waterdeep: Dragon Heist', 
      }]
      .map(item => 
-     <span>{item.name}</span>)}
+      <div className={classes.actions}>
+      {item.name}
+            <button className={classes.button} onClick={props.onClickModal}>Select</button>
+        </div>
+    )}  
      </ul>;
 
     return ( 
-    <Modal>
+    <Modal >
         {CampaignItems}
         <div className={classes.total}>
         </div>
-        <div className={classes.actions}>
-            <button className={classes['button--alt']}>Close</button>
-            <button className={classes.button}>Order</button>
-        </div>
+      
     </Modal>
     )
 };

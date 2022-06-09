@@ -2,7 +2,7 @@ import { Fragment, useState } from 'react';
 import classes from './CampaignSelector.module.css'
 import Button from '../UI/Button';
 
-const CampaignSelector = () => {
+const CampaignSelector = (props) => {
 
     return <Fragment>
     <section className={classes.campaign}>
@@ -12,7 +12,7 @@ const CampaignSelector = () => {
       Please select what campaign you are running:
       </label>
       <div>
-      <Button name='Choose Campaign' />
+      <Button onClick={props.onClick} name='Choose Campaign' />
         </div>
     </div>
     </section>
