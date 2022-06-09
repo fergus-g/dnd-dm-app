@@ -63,8 +63,10 @@ function App() {
       {campaignModal && <CampaignItem onClickModal={hideCampaignModal} />}
       <Header />
       <main>
-        {campaignSelector && <CampaignSelector onClick={showCampaignModal} />}
-        {chapterSelector && <ChapterSelector />}
+        {campaignSelector && <CampaignSelector />}
+        {chapterSelector && (
+          <ChapterSelector onClickModal={showChapterSelector} />
+        )}
         {questSelector && <AvailableQuests />}
       </main>
     </Fragment>
