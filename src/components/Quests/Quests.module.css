@@ -1,8 +1,9 @@
-.quests {
+.quests grid-container {
+  display: grid;
   max-width: 60rem;
   width: 90%;
   margin: 2rem auto;
-  animation: meals-appear 1s ease-out forwards;
+  animation: quests-appear 1s ease-out forwards;
 }
 
 .quests ul {
@@ -11,7 +12,17 @@
   padding: 10;
 }
 
-@keyframes meals-appear {
+.quest ul {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.quest li {
+  display: inline-block;
+  vertical-align: top;
+}
+
+@keyframes quests-appear {
   from {
     opacity: 0;
     transform: translateY(3rem);

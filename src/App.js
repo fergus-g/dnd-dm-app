@@ -14,15 +14,8 @@ function App() {
     setCampaignModal(true);
   };
 
-  const hideCampaignModal = () => {
-    setCampaignModal(false);
-  };
   //CAMPAIGN SELECTOR UI ELEMENT
   const [campaignSelector, setCampaignSelector] = useState(true);
-
-  const showCampaignSelector = () => {
-    setCampaignSelector(true);
-  };
 
   const hideCampaignSelector = () => {
     setCampaignSelector(false);
@@ -30,13 +23,6 @@ function App() {
   //CHAPTER SELECTOR UI ELEMENT
   const [chapterSelector, setChapterSelector] = useState(false);
 
-  const showChapterSelector = () => {
-    setChapterSelector(true);
-  };
-
-  const hideChapterSelector = () => {
-    setChapterSelector(false);
-  };
   //MODAL DISPLAY FOR CHAPTER
   const [chapterModal, setChapterModal] = useState(false);
 
@@ -44,20 +30,8 @@ function App() {
     setChapterModal(true);
   };
 
-  const hideChapterModal = () => {
-    setChapterModal(false);
-  };
-
   //QUEST UI
   const [questSelector, setQuestSelector] = useState(false);
-
-  const showQuestSelector = () => {
-    setChapterModal(true);
-  };
-
-  const hideQuestSelector = () => {
-    setChapterModal(false);
-  };
 
   const chapterHandler = () => {
     setCampaignModal(false);
@@ -71,11 +45,16 @@ function App() {
     setQuestSelector(true);
   };
 
+  const headerButtonHandler = () => {
+    showChapterModal(true);
+    hideCampaignSelector(false);
+  };
+
   return (
     <Fragment>
       {campaignModal && <CampaignItem onClick={chapterHandler} />}
       {chapterModal && <ChapterModal onClick={questHandler} />}
-      <Header onClick={showChapterModal} />
+      <Header onClick={headerButtonHandler} />
       <main>
         {campaignSelector && <CampaignSelector onClick={showCampaignModal} />}
         {chapterSelector && <ChapterSelector onClick={showChapterModal} />}
