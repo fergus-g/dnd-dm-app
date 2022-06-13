@@ -15,7 +15,7 @@ const Header = (props) => {
       <header className={classes.header}>
         <h1>DM-Helper</h1>
         <div>
-          <Button onClick={props.onClickHeader} name="Chapter Selection" />
+          <Button onClick={props.onClick} name="Chapter Selection" />
           <Button name="Random Encounter" />
         </div>
       </header>

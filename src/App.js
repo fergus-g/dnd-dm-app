@@ -4,6 +4,7 @@ import CampaignSelector from "./components/Campaign/CampaignSelector";
 import ChapterSelector from "./components/Chapters/ChapterSelector";
 import AvailableQuests from "./components/Quests/Quests";
 import CampaignItem from "./components/Campaign/CampaignItem";
+import ChapterModal from "./components/Chapters/ChapterModal";
 
 function App() {
   // MODAL DISPLAY FOR CAMPAIGN CHOICE
@@ -64,15 +65,20 @@ function App() {
     setCampaignSelector(false);
   };
 
+  const questHandler = () => {
+    setChapterModal(false);
+    setChapterSelector(false);
+    setQuestSelector(true);
+  };
+
   return (
     <Fragment>
       {campaignModal && <CampaignItem onClickModal={chapterHandler} />}
-      <Header />
+      {chapterModal && <ChapterModal onClick={questHandler} />}
+      <Header onClick={showChapterModal} />
       <main>
         {campaignSelector && <CampaignSelector onClick={showCampaignModal} />}
-        {chapterSelector && (
-          <ChapterSelector onClickHeader={hideChapterSelector} />
-        )}
+        {chapterSelector && <ChapterSelector onClick={showChapterModal} />}
         {questSelector && <AvailableQuests />}
       </main>
     </Fragment>
