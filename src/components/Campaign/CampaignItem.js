@@ -20,7 +20,7 @@ const CampaignItem = (props) => {
       ].map((item) => (
         <div className={classes.actions}>
           {item.name}
-          <button className={classes.button} onClick={props.onClickModal}>
+          <button className={classes.button} onClick={props.onClick}>
             Select
           </button>
         </div>

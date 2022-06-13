@@ -73,7 +73,7 @@ function App() {
 
   return (
     <Fragment>
-      {campaignModal && <CampaignItem onClickModal={chapterHandler} />}
+      {campaignModal && <CampaignItem onClick={chapterHandler} />}
       {chapterModal && <ChapterModal onClick={questHandler} />}
       <Header onClick={showChapterModal} />
       <main>
