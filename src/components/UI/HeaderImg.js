@@ -1,7 +1,6 @@
-import icewind from "../../assets/icewind-header.jpg";
-import strahd from "../../assets/curseofstrahd-header.jpg";
-import waterdeep from "../../assets/waterdeep-header.jpg";
 import classes from "../Layout/Header.module.css";
+import header from "../../assets/dnd-header.webp";
+import icewind from "../../assets/icewind-header.jpg";
 
 const HeaderImg = (props) => {
   return (

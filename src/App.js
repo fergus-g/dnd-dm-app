@@ -6,6 +6,7 @@ import AvailableQuests from "./components/Quests/Quests";
 import CampaignItem from "./components/Campaign/CampaignItem";
 import ChapterModal from "./components/Chapters/ChapterModal";
 import QuestUI from "./components/UI/QuestUI/QuestUI";
+import { CampaignContext } from "./components/CampaignContext/CampaignContext";
 
 function App() {
   // MODAL DISPLAY FOR CAMPAIGN CHOICE
@@ -52,7 +53,7 @@ function App() {
   };
 
   return (
-    <Fragment>
+    <CampaignContext.Provider value="icewind">
       {campaignModal && <CampaignItem onClick={chapterHandler} />}
       {chapterModal && <ChapterModal onClick={questHandler} />}
       <Header onClick={headerButtonHandler} />
@@ -62,7 +63,7 @@ function App() {
         {questSelector && <AvailableQuests />}
         <QuestUI />
       </main>
-    </Fragment>
+    </CampaignContext.Provider>
   );
 }
 

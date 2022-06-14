@@ -1,11 +1,15 @@
-import { Fragment } from "react";
+import { Fragment, useContext } from "react";
 
 import Button from "../UI/Button";
 import header from "../../assets/dnd-header.webp";
+import icewind from "../../assets/icewind-header.jpg";
 import HeaderImg from "../UI/HeaderImg";
 import classes from "./Header.module.css";
+import { CampaignContext } from "../CampaignContext/CampaignContext";
 
 const Header = (props) => {
+  const img = useContext(CampaignContext);
+  console.log(img);
   return (
     <Fragment>
       <header className={classes.header}>
@@ -15,7 +19,7 @@ const Header = (props) => {
           <Button name="Random Encounter" />
         </div>
       </header>
-      <HeaderImg image={header} />
+      <HeaderImg image={img} />
     </Fragment>
   );
 };

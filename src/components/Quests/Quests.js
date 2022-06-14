@@ -92,6 +92,7 @@ const AvailableQuests = () => {
       location={quest.location}
     />
   ));
+
   return (
     <section className={classes.quest}>
       <Card>
@@ -100,5 +101,5 @@ const AvailableQuests = () => {
     </section>
   );
 };
-
+console.log(AvailableQuests());
 export default AvailableQuests;
