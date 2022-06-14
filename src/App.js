@@ -5,6 +5,7 @@ import ChapterSelector from "./components/Chapters/ChapterSelector";
 import AvailableQuests from "./components/Quests/Quests";
 import CampaignItem from "./components/Campaign/CampaignItem";
 import ChapterModal from "./components/Chapters/ChapterModal";
+import QuestUI from "./components/UI/QuestUI/QuestUI";
 
 function App() {
   // MODAL DISPLAY FOR CAMPAIGN CHOICE
@@ -15,7 +16,7 @@ function App() {
   };
 
   //CAMPAIGN SELECTOR UI ELEMENT
-  const [campaignSelector, setCampaignSelector] = useState(true);
+  const [campaignSelector, setCampaignSelector] = useState(false);
 
   const hideCampaignSelector = () => {
     setCampaignSelector(false);
@@ -59,6 +60,7 @@ function App() {
         {campaignSelector && <CampaignSelector onClick={showCampaignModal} />}
         {chapterSelector && <ChapterSelector onClick={showChapterModal} />}
         {questSelector && <AvailableQuests />}
+        <QuestUI />
       </main>
     </Fragment>
   );
